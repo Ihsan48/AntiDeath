@@ -1,0 +1,15 @@
+---
+# Choose in which World AntiDeath is Enable
+# Example: ["lobby"]
+Enabled-Worlds: []
+# Choose in which World AntiDeath is Disable
+# Example: ["survival"]
+Disabled-Worlds: []
+# Leave those two empty to activate this Plugin in all Worlds
+
+# If set to true, this will teleport players to the default
+# world for the server.  Otherwise, the player will be sent
+# back to the default spawn point for the world they are in.
+Use-Default-World: false
+...
+
