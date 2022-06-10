@@ -12,6 +12,7 @@ use pocketmine\plugin\PluginBase;
 
 use pocketmine\event\Listener;
 use pocketmine\world\World;
+use pocketmine\world\Position;
 
 use pocketmine\event\player\PlayerExhaustEvent;
 use pocketmine\event\entity\EntityDamageEvent;
@@ -39,7 +40,7 @@ class AntiDeath extends PluginBase implements Listener{
 	 *
 	 * @return bool
 	 */
-	public function onHunger(PlayerExhaustEvent $event) : void{
+	public function onHunger(PlayerExhaustEvent $event) {
 		$entity = $event->getEntity();
 		if(!$entity instanceof Player){
 			return;
@@ -184,7 +185,7 @@ class AntiDeath extends PluginBase implements Listener{
 		}
 	}
 	
-	private function NoDeath(Level $level) : bool {
+	private function NoDeath(World $world) : bool {
 		if(empty($this->enabledWorlds) and empty($this->disabledWorlds)){
 			return true;
 		}
