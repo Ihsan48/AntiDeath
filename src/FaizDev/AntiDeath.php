@@ -40,7 +40,7 @@ class AntiDeath extends PluginBase implements Listener{
 	 *
 	 * @return bool
 	 */
-	public function onHunger(PlayerExhaustEvent $event) {
+	public function onHunger(PlayerExhaustEvent $event): void {
 		$entity = $event->getEntity();
 		if(!$entity instanceof Player){
 			return;
