@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace FaizDev;
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
 
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginBase;
 
 use pocketmine\event\Listener;
-use pocketmine\level\Level;
+use pocketmine\world\World;
 
 use pocketmine\event\player\PlayerExhaustEvent;
 use pocketmine\event\entity\EntityDamageEvent;
@@ -31,7 +31,7 @@ class AntiDeath extends PluginBase implements Listener{
 	  $this->enabledWorlds = $this->getConfig()->get("Enabled-Worlds");
 	  $this->disabledWorlds = $this->getConfig()->get("Disabled-Worlds");
 	  $this->useDefaultWorld = $this->getConfig()->get("Use-Default-World");
-    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+          $this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	
 	/**
@@ -45,52 +45,52 @@ class AntiDeath extends PluginBase implements Listener{
 			return;
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_ATTACK){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_DAMAGE){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_MINING){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_HEALTH_REGEN){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_POTION){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_WALKING){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_SPRINTING){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_SWIMMING){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_JUMPING){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_SPRINT_JUMPING){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
@@ -102,83 +102,83 @@ class AntiDeath extends PluginBase implements Listener{
 			return;
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_CONTACT){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_ENTITY_ATTACK){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_PROJECTILE){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_SUFFOCATION){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_FALL){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_FIRE){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_FIRE_TICK){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_LAVA){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_DROWNING){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_BLOCK_EXPLOSION){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_ENTITY_EXPLOSION){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_VOID){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				  $this->saveVoid($entity);
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_SUICIDE){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_MAGIC){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_CUSTOM){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_STARVATION){
-				if($this->NoDeath($entity->getLevel())){
+				if($this->NoDeath($entity->getWorld())){
 				$event->setCancelled();
 			}
 		}
@@ -188,15 +188,15 @@ class AntiDeath extends PluginBase implements Listener{
 		if(empty($this->enabledWorlds) and empty($this->disabledWorlds)){
 			return true;
 		}
-		$levelFolderName = $level->getFolderName();
+		$worldFolderName = $world->getFolderName();
 
-		if(in_array($levelFolderName, $this->disabledWorlds)){
+		if(in_array($worldFolderName, $this->disabledWorlds)){
 			return false;
 		}
-		if(in_array($levelFolderName, $this->enabledWorlds)){
+		if(in_array($worldFolderName, $this->enabledWorlds)){
 			return true;
 		}
-		if(!empty($this->enabledWorlds) and !in_array($levelFolderName, $this->enabledWorlds)){
+		if(!empty($this->enabledWorlds) and !in_array($worldFolderName, $this->enabledWorlds)){
 			return false;
 		}
 		return true;
@@ -207,9 +207,9 @@ class AntiDeath extends PluginBase implements Listener{
 	 */
 	private function saveVoid(Player $player) : void{
 		if($this->useDefaultWorld){
-			$position = $player->getServer()->getDefaultLevel()->getSpawnLocation();
+			$position = $player->getServer()->getDefaultWorld()->getSpawnLocation();
 		} else {
-			$position = $player->getLevel()->getSpawnLocation();
+			$position = $player->getWorld()->getSpawnLocation();
 		}
 		$player->teleport($position);
 	}
