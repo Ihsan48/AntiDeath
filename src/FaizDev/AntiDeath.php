@@ -208,7 +208,7 @@ class AntiDeath extends PluginBase implements Listener{
 	 */
 	private function saveVoid(Player $player) : void{
 		if($this->useDefaultWorld){
-			$position = $player->Server->getWorldManager()->getDefaultWorld()->getSafeSpawn();
+			$position = $this->getServer()->getWorldManager()->getDefaultWorld()->getSafeSpawn();
 		} else {
 			$position = $player->getWorld()->getSafeSpawn();
 		}
