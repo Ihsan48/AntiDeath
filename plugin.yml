@@ -1,8 +1,6 @@
----
 name: AntiDeath
 main: FaizDev\AntiDeath
 api: 4.0.0
 version: 1.2
 author: FaizDev
 description: A Simple Plugin so that No Player dies on Server
-...
