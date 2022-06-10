@@ -46,52 +46,52 @@ class AntiDeath extends PluginBase implements Listener{
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_ATTACK){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_DAMAGE){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_MINING){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_HEALTH_REGEN){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_POTION){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_WALKING){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_SPRINTING){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_SWIMMING){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_JUMPING){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === PlayerExhaustEvent::CAUSE_SPRINT_JUMPING){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 	}
@@ -103,83 +103,83 @@ class AntiDeath extends PluginBase implements Listener{
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_CONTACT){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_ENTITY_ATTACK){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_PROJECTILE){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_SUFFOCATION){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_FALL){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_FIRE){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_FIRE_TICK){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_LAVA){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_DROWNING){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_BLOCK_EXPLOSION){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_ENTITY_EXPLOSION){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_VOID){
 				if($this->NoDeath($entity->getWorld())){
 				  $this->saveVoid($entity);
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_SUICIDE){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_MAGIC){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_CUSTOM){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 		if($event->getCause() === EntityDamageEvent::CAUSE_STARVATION){
 				if($this->NoDeath($entity->getWorld())){
-				$event->setCancelled();
+				$event->cancel();
 			}
 		}
 	}
