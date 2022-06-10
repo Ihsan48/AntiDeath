@@ -27,7 +27,7 @@ class AntiDeath extends PluginBase implements Listener{
 	/** @var bool */
 	private $useDefaultWorld = false;
 	
-	public function onEnable(){
+	public function onEnable(): void {
 	  $this->enabledWorlds = $this->getConfig()->get("Enabled-Worlds");
 	  $this->disabledWorlds = $this->getConfig()->get("Disabled-Worlds");
 	  $this->useDefaultWorld = $this->getConfig()->get("Use-Default-World");
@@ -35,7 +35,7 @@ class AntiDeath extends PluginBase implements Listener{
 	}
 	
 	/**
-	 * @param Level $level
+	 * @param World $world
 	 *
 	 * @return bool
 	 */
